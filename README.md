@@ -18,7 +18,7 @@
     <b>Demo</b>
 </a>
 
----
+
 
 ## Run the app with Docker
 
@@ -34,7 +34,7 @@ docker run -it --rm -p 80:80 expense-tracker
 
 Then open http://localhost/ to see production ready app.
 
----
+
 
 ## Contributing
 
