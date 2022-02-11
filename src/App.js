@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Expenses from './components/Expenses/Expenses';
+
 const INITIAL_EXPENSES = [
     {
         id: 'e1',
