@@ -22,7 +22,7 @@ jobs:
           mkdir -p /home/runner/work/_temp/_github_home/build
           npm ci
           npm run build
-          mv ./build /home/runner/work/_temp/_github_home/build
+          mv ./build /home/runner/work/_temp/_github_home
       - name: Deploy Netlify
         uses: danakim/gh-action-deploy-netlify@master
         with:
