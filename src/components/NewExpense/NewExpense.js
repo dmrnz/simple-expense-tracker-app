@@ -20,7 +20,7 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
         });
         closeFormHandler();
-        };
+    };
 
     return (
         <div className='new-expense'>
