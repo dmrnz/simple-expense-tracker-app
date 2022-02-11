@@ -1,0 +1,7 @@
+.idea
+build
+node_modules
+.eslintcache
+.gitignore
+LICENSE.md
+Dockerfile
