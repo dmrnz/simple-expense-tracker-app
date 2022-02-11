@@ -13,9 +13,9 @@
 
 
 <a href="https://simple-expense-tracker-app.netlify.app/">
-<!--suppress CheckImageSize -->
-<img src=".github/demo-image.png" width="100%" alt="expense tracker demo picture">
-<h3>Demo</h3>
+    <!--suppress CheckImageSize -->
+    <img src=".github/demo-image.png" width="100%" alt="expense tracker demo picture">
+    <b>Demo</b>
 </a>
 
 ---
@@ -50,6 +50,6 @@ npm run start
 
 Then open http://localhost:3000/ to see app in development mode.
 
-### License
+## License
 
 This App is open source software licensed as MIT.
