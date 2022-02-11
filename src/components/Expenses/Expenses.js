@@ -6,6 +6,14 @@ import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
 import './Expenses.css';
 
+export const getAvailableYears = (items) => {
+    const allYears = items.map(expense => expense.date.getFullYear().toString());
+
+    return [...new Set(allYears)].sort(
+        (a, b) => parseInt(b) - parseInt(a)
+    );
+};
+
 const Expenses = (props) => {
     const [filteredYear, setFilteredYear] = useState('2022');
 
@@ -17,18 +25,12 @@ const Expenses = (props) => {
         return expense.date.getFullYear().toString() === filteredYear;
     });
 
-    const allYears = props.items.map(expense => expense.date.getFullYear().toString());
-
-    const availableYears = [...new Set(allYears)].sort(
-        (a, b) => parseInt(b) - parseInt(a)
-    );
-
     return (
         <div>
             <Card className='expenses'>
                 <ExpensesFilter
                     selected={filteredYear}
-                    availableYears={availableYears}
+                    availableYears={getAvailableYears(props.items)}
                     onChangeFilter={filterChangeHandler}
                 />
                 <ExpensesChart expenses={filteredExpenses}/>
