@@ -1,4 +1,5 @@
 # Simple expense tracker app
+v.1.2.0
 
 ### Master Branch Status:
 
