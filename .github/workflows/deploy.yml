@@ -1,9 +1,13 @@
 name: 'Deploy to Netlify'
 
 on:
+  pull_request:
+    branches:
+    - master
   push:
     branches:
     - master
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -16,8 +20,9 @@ jobs:
       - name: Build the website
         run: |
           mkdir -p /home/runner/work/_temp/_github_home/build
+          npm ci
           npm run build
-          cp ./build /home/runner/work/_temp/_github_home/build
+          mv ./build /home/runner/work/_temp/_github_home
       - name: Deploy Netlify
         uses: danakim/gh-action-deploy-netlify@master
         with:
