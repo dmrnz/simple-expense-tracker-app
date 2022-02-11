@@ -1,9 +1,6 @@
 name: 'Deploy to Netlify'
 
 on:
-  pull_request:
-    branches:
-    - master
   push:
     branches:
     - master
